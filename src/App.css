@@ -1,38 +1,80 @@
-.App {
+.app {
+  background: #ECF3F7;
+  padding: 30px;
+  padding-left: 40px;
+  height: 100vh;
+}
+
+.title {
+  color: #27a89b;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo {
+  background: rgba(240, 98, 146, 0.85);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+  padding: 8px;
+  height: 30px;
+  margin: 0px 5px 6px 0px;
+  border-radius: 4px;
+  width: 85%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo > span {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+  line-height: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-list {
+  background: rgba(66, 165, 245, 0.35);
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 400px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  padding:  1rem;
+  height: 2.25em;
 }
 
-.App-link {
-  color: #61dafb;
+.checkbox {
+  background: rgba(240, 98, 146, 0.85);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+  padding: 8px;
+  border-radius: 4px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0px 5px 6px 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checkbox > input {
+  transform: scale(1.2);
+}
+
+.btn-delete {
+  background: rgba(248, 25, 25, 0.85);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 6px;
+  width: 15%;
+  font-weight: 600;
+  cursor: pointer;
 }
