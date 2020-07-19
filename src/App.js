@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Todo from './components/Todo';
 import TodoForm from './components/ToDoForm';
 //import apiService from './services/apiService';
+//import urlService from './services/urlService';
 import './App.css';
 
 const App = () => {
@@ -14,7 +15,7 @@ const App = () => {
   ]);
 
   // const [todos, setTodos] = useState([
-  //   apiService('GET', 'http://todo-core-api.azurewebsites.net/api/TodoItems/')
+  //   apiService('GET', urlService.get)
   // ]);
 
   const addTodo = text => {
@@ -26,7 +27,7 @@ const App = () => {
     const newTodos = [...todos, newTodo];
     setTodos(newTodos);
 
-    //apiService('POST', 'http://todo-core-api.azurewebsites.net/api/TodoItems/', newTodo);
+    //apiService('POST', urlService.post, newTodo);
   };
 
   const updateTodo = index => {
@@ -35,7 +36,7 @@ const App = () => {
 
     setTodos(newTodos);
 
-    //apiService('PUT', `http://todo-core-api.azurewebsites.net/api/TodoItems/${index}`, newTodos[index])
+    //apiService('PUT', urlService.put.replace(':id', index), newTodos[index])
   };
 
   const removeTodo = index => {
@@ -44,7 +45,7 @@ const App = () => {
 
     setTodos(newTodos);
 
-    //apiService('DELETE', `http://todo-core-api.azurewebsites.net/api/TodoItems/${index}`)
+    //apiService('DELETE', urlService.del.replace(':id', index))
   };
 
   return (
