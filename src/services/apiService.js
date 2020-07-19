@@ -21,21 +21,3 @@ const apiService = (methodType, url, body) => {
 };
 
 export default apiService;
-
-
-// const post = async (method, url, body) => {
-//     const response = await fetch(url, {
-//         method: method,
-//         body: JSON.stringify(body)
-//     })
-// }
-
-// switch(method) {
-//     case 'GET': console.log(method, url, body);
-//     break;
-//     case 'POST': console.log(method, url, body);
-//     break;
-//     case 'DELETE': console.log(method, url, body);
-//     break;
-//     default: console.log(method, url, body)
-// }
