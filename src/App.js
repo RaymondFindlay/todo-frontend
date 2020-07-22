@@ -1,22 +1,15 @@
 import React, { useState } from 'react';
 import Todo from './components/Todo';
 import TodoForm from './components/ToDoForm';
-//import apiService from './services/apiService';
-//import urlService from './services/urlService';
+import apiService from './services/apiService';
+import * as URLs from './services/urlService';
 import './App.css';
 
 const App = () => {
 
   const [todos, setTodos] = useState([
-    {
-      text: 'Learn hooks',
-      isCompleted: false
-    }
+    apiService('GET', URLs.get)
   ]);
-
-  // const [todos, setTodos] = useState([
-  //   apiService('GET', urlService.get)
-  // ]);
 
   const addTodo = text => {
     const newTodo = {
@@ -27,7 +20,7 @@ const App = () => {
     const newTodos = [...todos, newTodo];
     setTodos(newTodos);
 
-    //apiService('POST', urlService.post, newTodo);
+    apiService('POST', URLs.post, newTodo);
   };
 
   const updateTodo = index => {
@@ -36,7 +29,7 @@ const App = () => {
 
     setTodos(newTodos);
 
-    //apiService('PUT', urlService.put.replace(':id', index), newTodos[index])
+    apiService('PUT', URLs.put.replace(':id', index), newTodos[index])
   };
 
   const removeTodo = index => {
@@ -45,7 +38,7 @@ const App = () => {
 
     setTodos(newTodos);
 
-    //apiService('DELETE', urlService.del.replace(':id', index))
+    apiService('DELETE', URLs.del.replace(':id', index))
   };
 
   return (

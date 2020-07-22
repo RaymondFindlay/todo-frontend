@@ -1,7 +1,8 @@
 // api calls to web service
 const callApi = async (url, options) => {
-    const response = await fetch(url, options)
-        .then(response => console.log(response))
+    const response = await fetch(url, options);
+
+    return response;
 }
 
 const apiService = (methodType, url, body) => {
